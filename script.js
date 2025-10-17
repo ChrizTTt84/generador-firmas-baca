@@ -149,13 +149,13 @@ class SignatureGenerator {
                                     <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px; margin-bottom: 8px;">
                                         <tr>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/Master_Qualified_Facility.png" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="https://chriztt84.github.io/Proyecto-Firmas-Digitales-Baca/Master_Qualified_Facility.png" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="https://chriztt84.github.io/Proyecto-Firmas-Digitales-Baca/9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/fsc.png" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="https://chriztt84.github.io/Proyecto-Firmas-Digitales-Baca/fsc.png" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                         </tr>
                                     </table>
