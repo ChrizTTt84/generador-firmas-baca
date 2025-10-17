@@ -156,13 +156,13 @@ class SignatureGenerator {
                                     <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px; margin-bottom: 8px;">
                                         <tr>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/Master%20Qualified%20Facility.png" alt="Master Qualified Facility Certified" style="width: 60px !important; height: 24px !important; max-width: 60px !important; max-height: 24px !important; object-fit: contain !important; display: inline-block !important;">
+                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/Master%20Qualified%20Facility.png" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;" onerror="this.style.display='none'">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/9001_2015.png" alt="ISO 9001:2015 Certified" style="width: 60px !important; height: 24px !important; max-width: 60px !important; max-height: 24px !important; object-fit: contain !important; display: inline-block !important;">
+                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;" onerror="this.style.display='none'">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/fsc.png" alt="FSC Certified" style="width: 60px !important; height: 24px !important; max-width: 60px !important; max-height: 24px !important; object-fit: contain !important; display: inline-block !important;">
+                                                <img src="https://ChrizTTt84.github.io/Proyecto-Firmas-Digitales-Baca/fsc.png" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;" onerror="this.style.display='none'">
                                             </td>
                                         </tr>
                                     </table>
