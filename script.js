@@ -156,13 +156,13 @@ class SignatureGenerator {
                                     <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px; margin-bottom: 8px;">
                                         <tr>
                                             <td style="padding-right: 8px;">
-                                                <img src="Master Qualified Facility.png" alt="Master Qualified Facility Certified" style="height: 32px; width: auto; display: block;">
+                                                <img src="https://ChrizTTt84.github.io/generador-firmas-baca/Master%20Qualified%20Facility.png" alt="Master Qualified Facility Certified" style="height: 32px; width: auto; display: block;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 32px; width: auto; display: block;">
+                                                <img src="https://ChrizTTt84.github.io/generador-firmas-baca/9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 32px; width: auto; display: block;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="fsc.png" alt="FSC Certified" style="height: 32px; width: auto; display: block;">
+                                                <img src="https://ChrizTTt84.github.io/generador-firmas-baca/fsc.png" alt="FSC Certified" style="height: 32px; width: auto; display: block;">
                                             </td>
                                         </tr>
                                     </table>
