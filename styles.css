@@ -1,0 +1,493 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Layout principal */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Sección del formulario */
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.form-section h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.form-section h3 {
+    color: #34495e;
+    margin: 25px 0 15px 0;
+    font-size: 1.3rem;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Campos de solo lectura */
+.readonly-field {
+    background: #f0f0f0 !important;
+    color: #666 !important;
+    cursor: not-allowed;
+    border-color: #d0d0d0 !important;
+}
+
+.readonly-field:focus {
+    border-color: #d0d0d0 !important;
+    box-shadow: none !important;
+}
+
+input[type="color"] {
+    height: 45px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Sección de vista previa */
+.preview-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.preview-section h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.signature-preview {
+    min-height: 300px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #f9f9f9;
+    position: relative;
+}
+
+.placeholder {
+    text-align: center;
+    color: #999;
+    padding: 50px 20px;
+}
+
+.placeholder i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Estilos de firma generada */
+.signature {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    color: #333;
+}
+
+.signature-modern {
+    border-left: 4px solid var(--primary-color, #3498db);
+    padding-left: 15px;
+}
+
+.signature-classic {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: #fafafa;
+}
+
+.signature-minimal {
+    border-top: 2px solid var(--primary-color, #3498db);
+    padding-top: 15px;
+}
+
+.signature-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color, #2c3e50);
+    margin-bottom: 5px;
+}
+
+.signature-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.signature-company {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color, #2c3e50);
+    margin-bottom: 8px;
+}
+
+.signature-contact {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.signature-contact a {
+    color: var(--primary-color, #3498db);
+    text-decoration: none;
+}
+
+.signature-contact a:hover {
+    text-decoration: underline;
+}
+
+.signature-social {
+    margin-top: 10px;
+}
+
+.signature-social a {
+    display: inline-block;
+    margin-right: 10px;
+    color: var(--primary-color, #3498db);
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.signature-social a:hover {
+    transform: scale(1.2);
+}
+
+.signature-address {
+    font-size: 11px;
+    color: #888;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Botones */
+.actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #7f8c8d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(149, 165, 166, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+.btn-outline:hover {
+    background: #e74c3c;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Mensaje de éxito */
+.success-message {
+    background: #2ecc71;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    padding: 20px 0;
+}
+
+/* Estilos específicos para el logo */
+.signature-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signature-logo img {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Ajustes responsivos para el logo */
+@media (max-width: 768px) {
+    .signature-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+    
+    .signature-logo {
+        margin-bottom: 15px;
+    }
+    
+    .signature-logo img {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signature-logo img {
+        max-height: 50px;
+    }
+}
+
+/* Estilos para redes sociales fijas */
+.signature-social {
+    margin-top: 15px;
+}
+
+.signature-social a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.signature-social a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Colores específicos para cada red social */
+.signature-social a[href*="linkedin"] {
+    color: #0077b5;
+}
+
+.signature-social a[href*="facebook"] {
+    color: #1877f2;
+}
+
+.signature-social a[href*="instagram"] {
+    color: #e4405f;
+}
+
+/* Responsive para redes sociales */
+@media (max-width: 480px) {
+    .signature-social a {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+}
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .form-section, .preview-section {
+        padding: 20px;
+    }
+    
+    .actions {
+        justify-content: center;
+    }
+    
+    .btn {
+        flex: 1;
+        justify-content: center;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-section, .preview-section {
+        padding: 15px;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Animaciones */
+.form-section, .preview-section {
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mejoras de accesibilidad */
+input:invalid {
+    border-color: #e74c3c;
+}
+
+input:valid {
+    border-color: #27ae60;
+}
+
+.form-group label::after {
+    content: " *";
+    color: #e74c3c;
+    display: none;
+}
+
+.form-group:has(input[required]) label::after {
+    display: inline;
+}

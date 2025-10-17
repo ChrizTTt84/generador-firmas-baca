@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Firmas Digitales - Baca</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-signature"></i> Generador de Firmas Digitales</h1>
+            <p>Crea firmas profesionales para tu correo electrónico</p>
+        </header>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>Información Personal</h2>
+                <form id="signatureForm">
+                    <div class="form-group">
+                        <label for="fullName">Nombre Completo *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobTitle">Departamento/Puesto</label>
+                        <input type="text" id="jobTitle" name="jobTitle" placeholder="Ej: Gerente de Ventas">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" value="664 6899763" readonly class="readonly-field">
+                        </div>
+                        <div class="form-group">
+                            <label for="extension">Extensión</label>
+                            <input type="text" id="extension" name="extension" placeholder="Ej: 101, 205">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Móvil (Opcional)</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Número móvil personal">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Sitio Web</label>
+                        <input type="url" id="website" name="website" value="www.grupoindustrialbaca.com" readonly class="readonly-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Dirección</label>
+                        <textarea id="address" name="address" rows="3" readonly class="readonly-field">Avenida Retorno del Aguila Coronada, #19090, Fraccionamiento Baja Maq El Aguila, Codigo Postal: 22215. Tijuana BC, México.</textarea>
+                    </div>
+
+                    <h3>Personalización</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="template">Plantilla</label>
+                            <select id="template" name="template">
+                                <option value="minimal">Minimalista</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="preview-section">
+                <h2>Vista Previa</h2>
+                <div id="signaturePreview" class="signature-preview">
+                    <div class="placeholder">
+                        <i class="fas fa-eye"></i>
+                        <p>La vista previa aparecerá aquí mientras completas el formulario</p>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="copyHtml" class="btn btn-primary" disabled>
+                        <i class="fas fa-copy"></i> Copiar HTML
+                    </button>
+                    <button id="downloadHtml" class="btn btn-secondary" disabled>
+                        <i class="fas fa-download"></i> Descargar HTML
+                    </button>
+                    <button id="resetForm" class="btn btn-outline">
+                        <i class="fas fa-refresh"></i> Limpiar
+                    </button>
+                </div>
+
+                <div id="copySuccess" class="success-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i> ¡HTML copiado al portapapeles!
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Generador de Firmas Digitales Baca. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
