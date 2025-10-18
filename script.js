@@ -3,7 +3,6 @@ class SignatureGenerator {
     constructor() {
         this.form = document.getElementById('signatureForm');
         this.preview = document.getElementById('signaturePreview');
-        this.copyBtn = document.getElementById('copyHtml');
         this.downloadBtn = document.getElementById('downloadHtml');
         this.resetBtn = document.getElementById('resetForm');
         this.successMessage = document.getElementById('copySuccess');
@@ -27,7 +26,6 @@ class SignatureGenerator {
         });
 
         // Botones de acción
-        this.copyBtn.addEventListener('click', () => this.copyToClipboard());
         this.downloadBtn.addEventListener('click', () => this.downloadHtml());
         this.resetBtn.addEventListener('click', () => this.resetForm());
     }
@@ -149,13 +147,13 @@ class SignatureGenerator {
                                     <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px; margin-bottom: 8px;">
                                         <tr>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://chriztt84.github.io/Proyecto-Firmas-Digitales-Baca/Master_Qualified_Facility.png" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="Master_Qualified_Facility.png" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://chriztt84.github.io/Proyecto-Firmas-Digitales-Baca/9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="https://chriztt84.github.io/Proyecto-Firmas-Digitales-Baca/fsc.png" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="fsc.png" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                         </tr>
                                     </table>
@@ -193,52 +191,11 @@ class SignatureGenerator {
     }
 
     enableActions() {
-        this.copyBtn.disabled = false;
         this.downloadBtn.disabled = false;
     }
 
     disableActions() {
-        this.copyBtn.disabled = true;
         this.downloadBtn.disabled = true;
-    }
-
-    async copyToClipboard() {
-        const data = this.getFormData();
-        if (!data.fullName) return;
-        
-        const signatureHtml = this.generateSignatureHtml(data);
-        
-        try {
-            // Crear un elemento temporal para copiar
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = signatureHtml;
-            document.body.appendChild(tempDiv);
-            
-            // Seleccionar y copiar
-            const range = document.createRange();
-            range.selectNodeContents(tempDiv);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            
-            // Intentar copiar usando la API moderna
-            if (navigator.clipboard && window.isSecureContext) {
-                await navigator.clipboard.writeText(signatureHtml);
-            } else {
-                // Fallback para navegadores más antiguos
-                document.execCommand('copy');
-            }
-            
-            // Limpiar
-            document.body.removeChild(tempDiv);
-            selection.removeAllRanges();
-            
-            this.showSuccessMessage();
-            
-        } catch (err) {
-            console.error('Error al copiar:', err);
-            alert('Error al copiar la firma. Por favor, intenta de nuevo.');
-        }
     }
 
     downloadHtml() {
@@ -261,7 +218,7 @@ class SignatureGenerator {
     async copyToClipboard() {
         const data = this.getFormData();
         if (!data.fullName) return;
-
+        
         try {
             // Crear un canvas temporal
             const canvas = document.createElement('canvas');
