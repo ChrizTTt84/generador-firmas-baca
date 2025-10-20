@@ -11,8 +11,50 @@ class SignatureGenerator {
         this.resetBtn = document.getElementById('resetForm');
         this.successMessage = document.getElementById('copySuccess');
         
+        // Almacenar las imágenes en base64
+        this.imageBase64 = {};
+        
         this.initializeEventListeners();
         this.loadSavedData();
+        this.loadImagesAsBase64();
+    }
+
+    async loadImagesAsBase64() {
+        try {
+            // Cargar las imágenes y convertirlas a base64
+            this.imageBase64.fsc = await this.imageToBase64('./docs/assets/fsc.png');
+            this.imageBase64.iso = await this.imageToBase64('./docs/assets/9001_2015.png');
+            this.imageBase64.master = await this.imageToBase64('./docs/assets/Master_Qualified_Facility.png');
+        } catch (error) {
+            console.error('Error cargando imágenes:', error);
+        }
+    }
+
+    async imageToBase64(src) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Calcular el tamaño objetivo (24px de altura como en los estilos)
+                const targetHeight = 24;
+                const aspectRatio = this.width / this.height;
+                const targetWidth = targetHeight * aspectRatio;
+                
+                // Configurar el canvas con el tamaño objetivo
+                canvas.width = targetWidth;
+                canvas.height = targetHeight;
+                
+                // Dibujar la imagen redimensionada
+                ctx.drawImage(this, 0, 0, targetWidth, targetHeight);
+                const dataURL = canvas.toDataURL('image/png');
+                resolve(dataURL);
+            };
+            img.onerror = reject;
+            img.src = src;
+        });
     }
 
     initializeEventListeners() {
@@ -127,6 +169,11 @@ class SignatureGenerator {
     }
 
     generateMinimalSignature(data, contactInfo, socialLinks, primaryColor, includeLogo) {
+        // Usar imágenes base64 si están disponibles, sino usar rutas relativas
+        const masterSrc = this.imageBase64.master || master;
+        const isoSrc = this.imageBase64.iso || iso;
+        const fscSrc = this.imageBase64.fsc || fsc;
+        
         return `
             <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; max-width: 600px; border-top: 3px solid ${primaryColor}; padding-top: 15px;">
                 <tr>
@@ -151,13 +198,13 @@ class SignatureGenerator {
                                     <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px; margin-bottom: 8px;">
                                         <tr>
                                             <td style="padding-right: 8px;">
-                                                <img src="${master}" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="${masterSrc}" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="${iso}" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="${isoSrc}" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="${fsc}" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="${fscSrc}" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                         </tr>
                                     </table>
