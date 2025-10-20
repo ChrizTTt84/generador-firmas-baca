@@ -21,10 +21,18 @@ class SignatureGenerator {
 
     async loadImagesAsBase64() {
         try {
+            console.log('Iniciando carga de imágenes base64...');
             // Cargar las imágenes y convertirlas a base64
             this.imageBase64.fsc = await this.imageToBase64('./docs/assets/fsc.png');
+            console.log('FSC cargada:', this.imageBase64.fsc ? 'OK' : 'FAIL');
+            
             this.imageBase64.iso = await this.imageToBase64('./docs/assets/9001_2015.png');
+            console.log('ISO cargada:', this.imageBase64.iso ? 'OK' : 'FAIL');
+            
             this.imageBase64.master = await this.imageToBase64('./docs/assets/Master_Qualified_Facility.png');
+            console.log('Master cargada:', this.imageBase64.master ? 'OK' : 'FAIL');
+            
+            console.log('Todas las imágenes base64 cargadas correctamente');
         } catch (error) {
             console.error('Error cargando imágenes:', error);
         }
@@ -173,6 +181,12 @@ class SignatureGenerator {
         const masterSrc = this.imageBase64.master || master;
         const isoSrc = this.imageBase64.iso || iso;
         const fscSrc = this.imageBase64.fsc || fsc;
+        
+        console.log('Usando imágenes:', {
+            master: this.imageBase64.master ? 'base64' : 'path',
+            iso: this.imageBase64.iso ? 'base64' : 'path',
+            fsc: this.imageBase64.fsc ? 'base64' : 'path'
+        });
         
         return `
             <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; max-width: 600px; border-top: 3px solid ${primaryColor}; padding-top: 15px;">
