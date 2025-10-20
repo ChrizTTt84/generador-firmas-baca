@@ -1,7 +1,7 @@
 // Generador de Firmas Digitales - JavaScript
-import fsc from '';
-import iso from '';
-import master from '';
+const fsc = './docs/assets/fsc.png';
+const iso = './docs/assets/9001_2015.png';
+const master = './docs/assets/Master_Qualified_Facility.png';
 
 class SignatureGenerator {
     constructor() {
@@ -151,13 +151,13 @@ class SignatureGenerator {
                                     <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px; margin-bottom: 8px;">
                                         <tr>
                                             <td style="padding-right: 8px;">
-                                                <img src={master} alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="${master}" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src={iso} alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="${iso}" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src={fsc} alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="${fsc}" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                         </tr>
                                     </table>
