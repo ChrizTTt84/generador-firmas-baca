@@ -147,13 +147,13 @@ class SignatureGenerator {
                                     <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 8px; margin-bottom: 8px;">
                                         <tr>
                                             <td style="padding-right: 8px;">
-                                                <img src="/generador-firmas-baca/assets/Master_Qualified_Facility.png" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="./assets/Master_Qualified_Facility.png" alt="Master Qualified Facility Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="/generador-firmas-baca/assets/9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="./assets/9001_2015.png" alt="ISO 9001:2015 Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                             <td style="padding-right: 8px;">
-                                                <img src="/generador-firmas-baca/assets/fsc.png" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
+                                                <img src="./assets/fsc.png" alt="FSC Certified" style="height: 24px !important; width: auto !important; max-width: 60px !important; object-fit: contain !important; vertical-align: middle !important;">
                                             </td>
                                         </tr>
                                     </table>
